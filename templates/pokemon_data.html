@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pokemon Data Attributes</h2>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{ attributes.name }}</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{ attributes.id }}</td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>{{ attributes.height }}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>{{ attributes.weight }}</td>
+        </tr>
+        <tr>
+            <td>Abilities</td>
+            <td>
+                <ul>
+                    {% for ability in attributes.abilities %}
+                        <li>{{ ability }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
